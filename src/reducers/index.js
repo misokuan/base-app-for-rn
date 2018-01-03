@@ -1,8 +1,10 @@
+// This file consolidates all reducers and groups into individual objects for each reducer
+
 import { combineReducers } from 'redux';
-import * as CoreReducer from './CoreReducer';
+import { core } from './CoreReducer';
 
 const baseApp = combineReducers({
-    CoreReducer,
+    core
 });
 
 export default baseApp;
