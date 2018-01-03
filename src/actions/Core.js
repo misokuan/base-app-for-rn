@@ -13,7 +13,7 @@ import {
     ADD_ITEM,
     REMOVE_ITEM,
     TOGGLE_STATUS,
-    SET_FILTER,
+    FILTER,
 } from './types';
 // Make sure './types' is filled in, see './types' for more info
 
@@ -29,6 +29,6 @@ export function toggleStatus(index) {
     return { type: TOGGLE_STATUS, index };
 }
 
-export function setFilter(filter) {
-    return { type: SET_FILTER, filter };
+export function filter(filter) {
+    return { type: FILTER, filter };
 }

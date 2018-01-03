@@ -5,7 +5,7 @@ import {
     ADD_ITEM,
     REMOVE_ITEM,
     TOGGLE_STATUS,
-    SET_FILTER,
+    FILTER,
     VisibilityFilters
 } from '../actions';
 // This is added to link to their respective actions
@@ -39,9 +39,9 @@ function items(state = [], action) {
     }
 }
 
-function setFilter(state = SHOW_ALL, action) {
+function filter(state = SHOW_ALL, action) {
     switch (action.type) {
-        case SET_FILTER:
+        case FILTER:
             return action.filter;
         default:
             return state;
@@ -49,6 +49,6 @@ function setFilter(state = SHOW_ALL, action) {
 }
 
 // Groups all functions within this reducer under one constant
-export const core = combineReducers({
-    items, setFilter,
+export const CORE = combineReducers({
+    items, filter,
 });

@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import { createStore } from 'redux';
 import baseApp from './src/reducers/index';
-import { addItem, removeItem, toggleStatus, setFilter } from './src/actions';
+import { addItem, removeItem, toggleStatus, filter } from './src/actions';
 
 const store = createStore(baseApp);
 
@@ -33,7 +33,7 @@ export default class App extends Component<{}> {
     store.dispatch(addItem('Learn about actions'));
     store.dispatch(addItem('Learn about reducers'));
     store.dispatch(addItem('Learn about store'));
-    store.dispatch(setFilter('SHOW_ACTIVE'));
+    store.dispatch(filter('SHOW_ACTIVE'));
     store.dispatch(toggleStatus(2));
     store.dispatch(removeItem(0));
   }
