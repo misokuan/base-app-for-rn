@@ -1,11 +1,8 @@
 import { combineReducers } from 'redux';
-import { items, setFilter } from './CoreReducer';
-
-console.log(items, setFilter);
+import * as CoreReducer from './CoreReducer';
 
 const baseApp = combineReducers({
-    items,
-    setFilter,
+    CoreReducer,
 });
 
 export default baseApp;

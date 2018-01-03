@@ -6,7 +6,6 @@ import {
 } from './types';
 
 export function addItem(text) {
-    console.log('enters here', text);
     return { type: ADD_ITEM, text };
 }
 

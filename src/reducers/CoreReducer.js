@@ -8,8 +8,6 @@ import {
 
 const { SHOW_ALL } = VisibilityFilters;
 
-console.log(ADD_ITEM);
-
 export function items(state = [], action) {
     switch (action.type) {
         case ADD_ITEM: {
