@@ -5,4 +5,4 @@ export * from './constants';
 export * from './types';
 
 // CUSTOM
-export * from './Core';
+export * from './CoreAction';

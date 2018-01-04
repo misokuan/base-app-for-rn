@@ -9,6 +9,13 @@ class RouterComponent extends Component {
         return (
             <Router>
                   <Scene key="root">
+                    {
+                        /*
+                        Key is the identifier,
+                        eg. calling Action.main() will render Main component
+                        with header title of Mainpage
+                        */
+                    }
                     <Scene
                       key="main"
                       component={Main}
