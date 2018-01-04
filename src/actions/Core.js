@@ -6,6 +6,7 @@ Flow is:
     1. Actions are called from component through store.dispatch(functionHere(params))
     2. Enters to this page to manipulate data or start fetch request from API
     3. Passes the end result (data) through { type: TYPE_HERE, keyName1: 'foo', keyName2: 'bar' } to reducer
+    3b. Good to have keynames - status (value: loading/ready) & error (value: error from backend)
     4. Reducer then stores the data, and can be accessed through store.getState() (will be called automatically when state changes)
 */
 
@@ -29,6 +30,6 @@ export function toggleStatus(index) {
     return { type: TOGGLE_STATUS, index };
 }
 
-export function filter(filter) {
-    return { type: FILTER, filter };
+export function filter(filterType) {
+    return { type: FILTER, filter: filterType };
 }

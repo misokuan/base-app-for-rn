@@ -49,6 +49,6 @@ function filter(state = SHOW_ALL, action) {
 }
 
 // Groups all functions within this reducer under one constant
-export const CORE = combineReducers({
+export const CoreReducer = combineReducers({
     items, filter,
 });
