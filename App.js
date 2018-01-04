@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import rootReducer from './src/reducers';
 import Router from './src/router';
+import API from './src/api';
 
-const store = createStore(rootReducer);
+const store = createStore(
+    rootReducer,
+    {},
+    applyMiddleware(thunk.withExtraArgument(API))
+);
 const unsubscribe = store.subscribe(() =>
     console.log(store.getState())
 );

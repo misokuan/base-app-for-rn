@@ -50,5 +50,6 @@ function filter(state = SHOW_ALL, action) {
 
 // Groups all functions within this reducer under one constant
 export const CoreReducer = combineReducers({
-    items, filter,
+    items,
+    filter,
 });
