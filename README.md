@@ -12,6 +12,7 @@ npm install
 
 - To use for new project, rename:
 > 'baseapp' to 'yourprojectname'
+
 > 'BaseApp' to 'YourProjectName'
 
 ## Features Included
