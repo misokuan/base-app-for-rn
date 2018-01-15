@@ -5,9 +5,10 @@ import {
   View
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import { Common } from '../styles';
 
 const Main = () => (
-    <View style={styles.container}>
+    <View style={Common.container}>
       <Text style={styles.welcome}>
         Welcome!
       </Text>
