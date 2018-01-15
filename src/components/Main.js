@@ -1,21 +1,50 @@
 import React, { Component } from 'react';
 import { Container, Content, Item, Input, Button, Text } from 'native-base';
 import { Actions } from 'react-native-router-flux';
-import { Common } from '../styles';
+import { Common as s } from '../styles';
+
+// var bcrypt = require('bcryptjs');
 
 class Main extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: null,
+            password: null,
+        };
+    }
+
+    loginUser() {
+        console.log(this.state.email, this.state.password);
+        // bcrypt.hash(this.state.password, 8, (err, hash) => {
+        //     console.log(hash);
+        // });
+        Actions.itemListing();
+    }
 
     render() {
         return (
-            <Container style={Common.container}>
+            <Container style={[s.container]}>
               <Content>
-                <Item rounded>
-                  <Input placeholder='Email' />
+                <Item rounded style={[s.ma1, s.ph1]}>
+                    <Input
+                        placeholder='Email'
+                        onChangeText={(text) => { this.setState({ email: text }); }}
+                        value={this.state.email}
+                    />
                 </Item>
-                <Item rounded>
-                  <Input placeholder='Password' />
+                <Item rounded style={[s.ma1, s.ph1]}>
+                      <Input
+                          placeholder='Password'
+                          onChangeText={(text) => { this.setState({ password: text }); }}
+                          value={this.state.password}
+                      />
                 </Item>
-                <Button block onPress={() => Actions.itemListing()}>
+                <Button
+                    block
+                    style={s.ma1}
+                    onPress={() => this.loginUser()}
+                >
                     <Text>Log In</Text>
                 </Button>
               </Content>

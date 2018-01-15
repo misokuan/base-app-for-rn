@@ -19,7 +19,7 @@ class RouterComponent extends Component {
                     <Scene
                       key="main"
                       component={Main}
-                      title="Mainpage"
+                      title="Base App"
                       initial
                     />
                     <Scene
