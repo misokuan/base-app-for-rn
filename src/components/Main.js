@@ -1,36 +1,27 @@
-import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React, { Component } from 'react';
+import { Container, Content, Item, Input, Button, Text } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 import { Common } from '../styles';
 
-const Main = () => (
-    <View style={Common.container}>
-      <Text style={styles.welcome}>
-        Welcome!
-      </Text>
-      <Text onPress={() => Actions.itemListing()}>
-        Go to Item Listing
-      </Text>
-    </View>
- );
+class Main extends Component {
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#bb0000',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-    color: '#ffffff',
-  },
-});
+    render() {
+        return (
+            <Container style={Common.container}>
+              <Content>
+                <Item rounded>
+                  <Input placeholder='Email' />
+                </Item>
+                <Item rounded>
+                  <Input placeholder='Password' />
+                </Item>
+                <Button block onPress={() => Actions.itemListing()}>
+                    <Text>Log In</Text>
+                </Button>
+              </Content>
+            </Container>
+        );
+    }
+}
 
 export default Main;
