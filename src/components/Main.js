@@ -3,8 +3,6 @@ import { Container, Content, Item, Input, Button, Text } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 import { Common as s } from '../styles';
 
-// var bcrypt = require('bcryptjs');
-
 class Main extends Component {
     constructor(props) {
         super(props);
@@ -16,9 +14,6 @@ class Main extends Component {
 
     loginUser() {
         console.log(this.state.email, this.state.password);
-        // bcrypt.hash(this.state.password, 8, (err, hash) => {
-        //     console.log(hash);
-        // });
         Actions.itemListing();
     }
 
@@ -38,6 +33,7 @@ class Main extends Component {
                           placeholder='Password'
                           onChangeText={(text) => { this.setState({ password: text }); }}
                           value={this.state.password}
+                          secureTextEntry
                       />
                 </Item>
                 <Button
