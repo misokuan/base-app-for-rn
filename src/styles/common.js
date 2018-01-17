@@ -1,6 +1,7 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { Colors as c } from './colors';
 
+// Set commonly used css styling here, or can opt for react-native-style-tachyons for presets
 export const Common = EStyleSheet.create({
     container: {
         flex: 1,

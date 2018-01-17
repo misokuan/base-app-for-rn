@@ -7,13 +7,17 @@ import rootReducer from './src/reducers';
 import Router from './src/router';
 import API from './src/api';
 
+// Required to begin using react-native-extended-stylesheet
 EStyleSheet.build({});
 
+// Creates redux store with API endpoint
 const store = createStore(
     rootReducer,
     {},
     applyMiddleware(thunk.withExtraArgument(API))
 );
+
+// Stops getting state updates after app is closed
 const unsubscribe = store.subscribe(() =>
     console.log(store.getState())
 );

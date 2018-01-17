@@ -12,9 +12,11 @@ import {
 
 const { SHOW_ALL } = VisibilityFilters;
 
+// modify the state base on cases
 function items(state = [], action) {
     switch (action.type) {
         case ADD_ITEM: {
+            // this adds a new object to the original items state
             return [
                 ...state,
                 {
@@ -24,8 +26,10 @@ function items(state = [], action) {
             ];
         }
         case REMOVE_ITEM:
+            // this removes item object based on index specified (from action)
             return state.filter((item, index) => index !== action.index);
         case TOGGLE_STATUS:
+            // this updates item object based on index specified (from action)
             return state.map((item, index) => {
                     if (index === action.index) {
                         return Object.assign({}, item, {
@@ -41,6 +45,7 @@ function items(state = [], action) {
 
 function filter(state = SHOW_ALL, action) {
     switch (action.type) {
+        // this updates the current filter (from action)
         case FILTER:
             return action.filter;
         default:
