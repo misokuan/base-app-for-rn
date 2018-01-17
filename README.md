@@ -19,6 +19,7 @@ npm install
 
 - Async action, reducer and state storage using redux & redux-thunk
 - Basic routing structure using native Router & Scene
+- Styling structure using native-base components & extended-stylesheet (for more css flexibility)
 - Code structure checking using Eslint, installation guide:
 > Sublime Text:
 > 1. Open "Command Pallet" Ctrl + Shift + p (Cmd + Shift + p on OSX)
