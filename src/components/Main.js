@@ -3,6 +3,8 @@ import { Container, Content, Item, Input, Button, Text } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 import { Common as s } from '../styles';
 
+const CryptoJS = require('crypto-js');
+
 class Main extends Component {
     constructor(props) {
         super(props);
@@ -13,7 +15,12 @@ class Main extends Component {
     }
 
     loginUser() {
-        console.log(this.state.email, this.state.password);
+        // Encrypt
+        const encryptedPassword = CryptoJS.AES.encrypt(this.state.password, 'loginUser').toString();
+        // console.log(encryptedPassword);
+        // Decrypt
+        // const bytes = CryptoJS.AES.decrypt(ciphertext.toString(), 'loginUser');
+        // const plaintext = bytes.toString(CryptoJS.enc.Utf8);
         Actions.itemListing();
     }
 
