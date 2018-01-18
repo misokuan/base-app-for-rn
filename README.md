@@ -5,6 +5,9 @@
 ```
 git clone https://github.com/misokuan/base-app-for-rn.git
 cd base-app-for-rn
+npm install && npm link
+react-native run-ios (for iOS)
+react-native run-android (for Android, after building with Android Studio)
 ```
 
 ## Usage Guide
@@ -16,7 +19,7 @@ cd base-app-for-rn
 
 - Remove 'ios' and 'android' folders
 - run `react-native eject`
-- install packages `npm install` and `npm link`
+- run `react-native link react-native-vector-icons`
 
 ## Features Included
 
