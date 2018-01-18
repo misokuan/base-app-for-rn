@@ -15,6 +15,9 @@ npm install
 
 > 'BaseApp' to 'YourProjectName'
 
+- Remove 'ios' and 'android' folders
+- run `react-native eject`
+
 ## Features Included
 
 - Async action, reducer and state storage using redux & redux-thunk
