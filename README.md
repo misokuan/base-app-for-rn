@@ -5,7 +5,6 @@
 ```
 git clone https://github.com/misokuan/base-app-for-rn.git
 cd base-app-for-rn
-npm install
 ```
 
 ## Usage Guide
@@ -17,6 +16,7 @@ npm install
 
 - Remove 'ios' and 'android' folders
 - run `react-native eject`
+- install packages `npm install` and `npm link`
 
 ## Features Included
 
