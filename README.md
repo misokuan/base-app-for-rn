@@ -38,6 +38,6 @@ npm install
 
 ## Useful Add-ons
 
-- [CodePush] (https://github.com/Microsoft/react-native-code-push) silently pushes updates to users' app
-- [Lottie] (https://github.com/airbnb/lottie-react-native) for animation support: [free library here] (https://www.lottiefiles.com/)
-- [react-native-vector-icons] (https://github.com/oblador/react-native-vector-icons) if planning to add additional icons not supported by native-base
+- [CodePush](https://github.com/Microsoft/react-native-code-push) silently pushes updates to users' app
+- [Lottie](https://github.com/airbnb/lottie-react-native) for animation support: [free library here](https://www.lottiefiles.com/)
+- [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) if planning to add additional icons not supported by native-base
